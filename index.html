@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+
+<head>
+    <title>Korea Helper</title>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"> 
+
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/widget.css">
+
+    <link rel="stylesheet" href="css/mainpage.css">
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js" type="text/javascript"></script>
+    <script src="http://www.appelsiini.net/projects/chained/jquery.chained.min.js" charset="utf-8"></script> 
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <script src="js/bootstrap-select.js"></script>
+
+    <script src="js/jquery.chained.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.scrolly.min.js"></script>
+    <script src="js/jquery.scrollex.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="js/dashBoard.js"></script>
+    <script src="js/clockWidget.js"></script>
+    <script src="js/dateWidget.js"></script>
+    <script src="js/searchbox.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/tourInfo.js"></script>
+    <script src="js/selectBox.js"></script>
+    <script>
+        (function() {
+            var ready = true;
+
+            document.addEventListener( "DOMContentLoaded", function(){ check(); }, false );
+
+            var check = function(){
+                if(ready){
+                    dashBoard.clockWidget("Mountain Time", { cssClass: "widget-time" })
+                        //.clockWidget("Hometown Time", { cssClass: "widget-time", timeZone: "Mountain" })
+                        .dateWidget("Mountain Date", { cssClass: "widget-date" });
+                        //.dateWidget("Hometown Date", { cssClass: "widget-date", timeZone: "Mountain" });
+
+                }
+                else{
+                    setTimeout( check, 10 );
+                }
+            }
+        })();
+    </script>
+
+</head>
+
+<body>
+    <!-- Wrapper -->
+            <div id="wrapper">
+
+                <!-- Header -->
+                    <header id="header" class="alt">
+                        <a href="main_page2.html" class="logo"><strong>For travel</strong> <span>By 01</span></a>
+                        <nav>
+                            <a href="#menu">Menu</a>
+                        </nav>
+                    </header>
+
+                <!-- Menu -->
+                    <nav id="menu">
+                        <ul class="links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="landing.html">Landing</a></li>
+                            <li><a href="generic.html">Generic</a></li>
+                            <li><a href="elements.html">Elements</a></li>
+                        </ul>
+                        <ul class="actions vertical">
+                            <li><a href="#" class="button special fit">Get Started</a></li>
+                            <li><a href="#" class="button fit">Log In</a></li>
+                        </ul>
+                    </nav>
+
+                <!-- Banner -->
+                    <section id="banner" class="major">
+                        <div class="inner">
+                            <header class="major">
+                                <h1>Let's travel Korea</h1>
+                            </header>
+                            <div class="content">
+                                <select id="selBox" class="selectpicker show-tick form-control" data-header="Select one that you want to see" data-live-search="true" data-style="btn-info">
+                                    <option value=weather data-tokens="weather" data-subtext="3hour forecast"data-icon="">Weather today</option>
+                                    <option value=searchPlace data-tokens="map,visit,place,go" data-subtext="where you want to visit">Search the place</option>
+                                    <option value=currentLoc data-tokens="food,current,map,place,where" data-subtext="food surroundings">Current place food</option>
+                                </select>
+                                <ul class="actions">
+                                    <li><a href="#one" id="selectBtn" class="button next scrolly">Go</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+</div>
+</body>
+</html>
