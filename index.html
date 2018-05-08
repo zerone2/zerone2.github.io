@@ -5,12 +5,7 @@
 <head>
     <title>Korea Helper</title>
 
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/widget.css">
-
-    <link rel="stylesheet" href="css/mainpage.css">
-    <link rel="stylesheet" href="css/bootstrap-select.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-min.css">
+    <link rel="stylesheet" type="text/css" href="css/mainpage.css">
 
 </head>
 
@@ -20,26 +15,13 @@
 
                 <!-- Header -->
                     <header id="header" class="alt">
-                        <a href="main_page2.html" class="logo"><strong>For travel</strong> <span>By 01</span></a>
+                        <a href="index.html" class="logo"><strong>For travel</strong> <span>By 01</span></a>
                         <nav>
                             <a href="#menu">Menu</a>
                         </nav>
                     </header>
 
-                <!-- Menu -->
-                    <nav id="menu">
-                        <ul class="links">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="landing.html">Landing</a></li>
-                            <li><a href="generic.html">Generic</a></li>
-                            <li><a href="elements.html">Elements</a></li>
-                        </ul>
-                        <ul class="actions vertical">
-                            <li><a href="#" class="button special fit">Get Started</a></li>
-                            <li><a href="#" class="button fit">Log In</a></li>
-                        </ul>
-                    </nav>
-
+            
                 <!-- Banner -->
                     <section id="banner" class="major">
                         <div class="inner">
@@ -47,19 +29,27 @@
                                 <h1>Let's travel Korea</h1>
                             </header>
                             <div class="content">
-                                <select id="selBox" class="selectpicker show-tick form-control" data-header="Select one that you want to see" data-live-search="true" data-style="btn-info">
-                                    <option value=weather data-tokens="weather" data-subtext="3hour forecast"data-icon="">Weather today</option>
-                                    <option value=searchPlace data-tokens="map,visit,place,go" data-subtext="where you want to visit">Search the place</option>
-                                    <option value=currentLoc data-tokens="food,current,map,place,where" data-subtext="food surroundings">Current place food</option>
+                                <select id="selBox" style="width: 100%">
+                                    <option value=weather>Weather today</option>
+                                    <option value=searchPlace>Search the place</option>
+                                    <option value=currentLoc>Current place food</option>
                                 </select>
                                 <ul class="actions">
-                                    <li><a href="#one" id="selectBtn" class="button next scrolly">Go</a></li>
+                                    <li><a href="#menu" id="selectBtn" class="button next scrolly">Go</a></li>
                                 </ul>
                             </div>
                         </div>
                     </section>
-                </div>
+                    <!-- Menu -->
+                    <nav id="menu">
+                        <ul class="links">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="weather.html">Weather</a></li>
+                            <li><a href="index.html">Nearby Restaurants</a></li>
+                            <li><a href="index.html">Search Place</a></li>
+                        </ul>
+                    </nav>
 
-</div>
+            </div>
 </body>
 </html>

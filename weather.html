@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Seoul Weather</title>
+     
+      <link rel="stylesheet" href="css/weather/styles.css">
+      <link rel="stylesheet" href="css/weather/normalize.css">
+      <link rel="stylesheet" href="css/weather/climacon-font/styles.css">
+
+   <body>
+      <div class="main-wrapper">
+         <div class="main-wrapper-mask"></div>
+         <div class="main-wrapper-front">
+            <div class="full-center">
+               <div class="widget-block">
+               	<!-- MAIN AREA -->
+                  <div class="img-area">
+                     <div class="img-area-mask"></div>
+                     <img src="css/weather/img/seoul.jpg">
+                     <div class="img-area-front">
+                        <h5 id="location">Wait Please!!</h5>
+                        <div id="weather-desc">
+                           <span>Sunny</span>
+                        </div>
+                        <ul class="weather-block-info">
+                           <li>
+                              <p id="temperature">25</p>
+                           </li>
+                           <li></li>
+                           <li>
+                              <ul class="weather-params">
+                                 <li><i class="climacon thermometer medium-high"></i>
+                                    <span id="pressure">743 mm Hg</span></li>
+                                 <li><i class="climacon moon full"></i> 
+                                    <span id="humidity">46% humidity</span></li>
+                                 <li><i class="climacon wind"></i> 
+                                    <span id="wind">2m/s </span></li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <!-- /MAIN AREA -->
+                  <!-- WEATHER FORECAST -->
+                  <ul class="week-forecast">
+                     <li class="sun">
+                        <div class="inner">
+                           <h5 class="week-day">Monday</h5>
+                           <i class="climacon sun"></i>
+                           <p class="week-day-temperature">30</p>
+                        </div>
+                     </li>
+                     <li class="rain">
+                        <div class="inner">
+                           <h5 class="week-day">Tuesday</h5>
+                           <i class="climacon rain"></i>
+                           <p class="week-day-temperature">25</p>
+                        </div>
+                     </li>
+                     <li class="cloud">
+                        <div class="inner">
+                           <h5 class="week-day">Wednsday</h5>
+                           <i class="climacon cloud"></i>
+                           <p class="week-day-temperature">32</p>
+                        </div>
+                     </li>
+                     <li class="sun">
+                        <div class="inner">
+                           <h5 class="week-day">Thursday</h5>
+                           <i class="climacon sun"></i>
+                           <p class="week-day-temperature">30</p>
+                        </div>
+                     </li>
+                     <li class="rain sun">
+                        <div class="inner">
+                           <h5 class="week-day">Friday</h5>
+                           <i class="climacon rain sun"></i>
+                           <p class="week-day-temperature">29</p>
+                        </div>
+                     </li>
+                     <li class="sun">
+                        <div class="inner">
+                           <h5 class="week-day">Saturday</h5>
+                           <i class="climacon sun"></i>
+                           <p class="week-day-temperature">25</p>
+                        </div>
+                     </li>
+                     <li class="cloud sun">
+                        <div class="inner">
+                           <h5 class="week-day">Sunday</h5>
+                           <i class="climacon cloud sun"></i>
+                           <p class="week-day-temperature">22</p>
+                        </div>
+                     </li>
+                  </ul>
+                  <!-- /WEATHER FORECAST -->
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
