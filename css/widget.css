@@ -4,6 +4,13 @@ body {
   font:13px/1.231 arial,helvetica,clean,sans-serif;
 }
 
+img{
+  width: 100%;
+  height: auto;
+  max-height: 90%;
+}
+
+
 #container {
   width: 1510px;
   margin: 1px auto;
@@ -12,8 +19,8 @@ body {
 
 #googlemap {
   margin: 5px;
-  width: 440px;
-  height: 380px;
+  width: 100%;
+  height: 80%;
   border: 1px solid black;
 }
 
@@ -22,69 +29,30 @@ body {
   box-shadow: 2px 0 3px #0d0d0d, -2px 0 3px #0d0d0d, 0 3px 3px #0d0d0d, 0 -2px 3px #0d0d0d;
   -moz-box-shadow: 2px 0 3px #0d0d0d, -2px 0 3px #0d0d0d, 0 3px 3px #0d0d0d, 0 -2px 3px #0d0d0d;
   -webkit-box-shadow: 2px 0 3px #0d0d0d, -2px 0 3px #0d0d0d, 0 3px 3px #0d0d0d, 0 -2px 3px #0d0d0d;
-  position: absolute;
   border-top: 1px solid #323434;
   border-bottom: 1px solid #232526;
-}
 
-.widget-size-1x1 {
-  width: 220px;
-  height: 300px;
-  
-}
-
-.widget-size-2x1 {
-  width: 420px;
-  height: 300px;
-  
-}
-
-.widget-size-1x2 {
-  width: 215px;
-  height: 470px;
-  
 }
 
 .widget-size-2x2 {
-  width: 470px;
-  height: 485px;
+  float: left;
+  width: 50%;
+  height: 95vmin;
   
 }
 
 .widget-size-2x2-ver2{
-  width: 560px;
-  height: 485px;
+  float: left;
+  width: 50%;
+  height: 95vmin;
 }
 
-.widget-size-3x1 {
-  width: 645px;
-  height: 300px;
-  
-}
-
-.widget-size-max-x {
+.widget-googlemap{
   width: 100%;
-  height: 45px;
+  height: 90%;
 }
 
-.logo-box {
-  width: 230px;
-  height: 190px;
-}
 
-.logo-box2 {
-  width : 430px;
-  height : 240px;
-}
-
-.weatherIcon{
-  background-color : powderblue;
-  position: absolute;
-  left : 430px;
-  top : 80px;
-  height : 200px;
-  width : 200px;
-}
 
 .widget > header {
   border-bottom: 1px solid #151617;
@@ -107,52 +75,3 @@ body {
   color : red;
   text-align : center;
 }
-
-.widget > .widget-time {
-  padding: 15px 10px 5px 10px;
-  height: 90px;
-  background: url(../assets/bg_time_head.gif);
-  color: #D3D4D4;
-  text-shadow: 1px 1px 1px #3F3F3F, -1px -1px 1px #3F3F3F;
-}
-
-.widget > .widget-body {
-  border-top: 2px solid #323434;
-}
-
-.widget-date {
-  padding: 10px 15px;
-}
-
-.t-size-x18 {
-  font-size: 150%;
-}
-
-.t-size-x24 {
-  font-size: 175%;
-}
-
-.t-size-x30 {
-  font-size: 225%;
-}
-
-.t-size-x60 {
-  font-size: 450%;
-}
-
-.t-size-x80 {
-  font-size: 725%;
-}
-.t-size-weather{
-  font-family : "Berlin Sans FB";
-  font-size : 200%;
-  color : skyblue;
-}
-.t-muted {
-  color: #707275;
-}
-
-
-
-
-
