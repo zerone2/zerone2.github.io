@@ -1,5 +1,5 @@
 /**
- * Created by yicho on 2017-05-12.
+ * Created by yicho on 2018-05-23.
  **/
 
 function getTourInfo(coords) {

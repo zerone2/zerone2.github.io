@@ -16,7 +16,7 @@ function loadScript(url, callback) {
 var myloaded = function() {
     console.log("tourInfo.js loaded!");
 }
-loadScript('tourInfo.js', myloaded);
+loadScript('js/tourInfo.js', myloaded);
 
 
 function myLocation() {
