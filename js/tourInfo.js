@@ -50,7 +50,7 @@ function getTourInfo(coords) {
     }
 
     xhr.open('GET', tourInfo, true);    //http 메소드, 요청을 처리할 url, 비동기로 처리될 것인지 지정하는 boolean값
-    xhr.send(null);
+    xhr.send();
 
     /*
     $.ajax({
