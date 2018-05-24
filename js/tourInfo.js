@@ -9,6 +9,7 @@ function getTourInfo(coords) {
     //var tourInfo = "http://api.visitkorea.or.kr/openapi/service/rest/EngService/locationBasedList?ServiceKey=RJIAymfYXJ3BFkiqarkd7OIgVl0i9SuZ9otu3dbjXZ6shNWV9u7cqGTsgHDjRKkHSmFUhpYMzclVYyT%2FEWriQA%3D%3D&contentTypeId=82&mapX=126.985735&mapY=37.561126&radius=5000&pageNo=1&numOfRows=10&listYN=Y&arrange=E&MobileOS=ETC&MobileApp=AppTesting&_type=json";
     
     var xhr = new XMLHttpRequest();
+    xhr.open("GET", tourInfo, true);    //http 메소드, 요청을 처리할 url, 비동기로 처리될 것인지 지정하는 boolean값
 
     xhr.onload = function(){        //서버로부터 응답 받으면 익명함수 호출
         if(xhr.status == 200){      //status 값이 정상이면 함수 정상 실행
@@ -49,7 +50,6 @@ function getTourInfo(coords) {
         }
     }
 
-    xhr.open('GET', tourInfo, true);    //http 메소드, 요청을 처리할 url, 비동기로 처리될 것인지 지정하는 boolean값
     xhr.send();
 
     /*
