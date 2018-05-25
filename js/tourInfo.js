@@ -2,14 +2,16 @@
  * Created by yicho on 2018-05-23.
  **/
 
-function getTourInfo(coords) {
+
+function getTourInfo(google_map, coords) {
     var tourUrl1 = "http://api.visitkorea.or.kr/openapi/service/rest/EngService/locationBasedList?ServiceKey=RJIAymfYXJ3BFkiqarkd7OIgVl0i9SuZ9otu3dbjXZ6shNWV9u7cqGTsgHDjRKkHSmFUhpYMzclVYyT%2FEWriQA%3D%3D&contentTypeId=82&";
     var tourUrl2 = "&radius=5000&pageNo=1&numOfRows=10&listYN=Y&arrange=E&MobileOS=ETC&MobileApp=AppTesting&_type=json";
     var tourInfo = tourUrl1 + coords + tourUrl2;
     //var tourInfo = "http://api.visitkorea.or.kr/openapi/service/rest/EngService/locationBasedList?ServiceKey=RJIAymfYXJ3BFkiqarkd7OIgVl0i9SuZ9otu3dbjXZ6shNWV9u7cqGTsgHDjRKkHSmFUhpYMzclVYyT%2FEWriQA%3D%3D&contentTypeId=82&mapX=126.985735&mapY=37.561126&radius=5000&pageNo=1&numOfRows=10&listYN=Y&arrange=E&MobileOS=ETC&MobileApp=AppTesting&_type=json";
-    
+
+    console.log("tourInfo loaded");
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", tourInfo, true);    //http 메소드, 요청을 처리할 url, 비동기로 처리될 것인지 지정하는 boolean값
+    var marker;
 
     xhr.onload = function(){        //서버로부터 응답 받으면 익명함수 호출
         if(xhr.status == 200){      //status 값이 정상이면 함수 정상 실행
@@ -39,10 +41,19 @@ function getTourInfo(coords) {
                     if (i >= 5) {
                         break;
                     }
+                    var googleLatLng = new google.maps.LatLng(data.response.body.items.item[i].mapy, data.response.body.items.item[i].mapx);
+                    console.log("mapY : " + data.response.body.items.item[i].mapy
+                    + " & mapX : " + data.response.body.items.item[i].mapx);
+
                     string += "==============================================================" + "<br>"
                         + "NAME" + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + ":" + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + data.response.body.items.item[i].title + "<br>"
                         + "ADDRESS" + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + ":" + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + data.response.body.items.item[i].addr1 + "<br>"
                         + "DISTANCE" + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + ":" + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + data.response.body.items.item[i].dist + "m" + "<br>";
+                    //makeMark(googleLatLng);
+                    marker = new google.maps.Marker({
+                        position: googleLatLng,
+                        map: google_map
+                    });
                     i++;
                 }
             }
@@ -50,6 +61,7 @@ function getTourInfo(coords) {
         }
     }
 
+    xhr.open("GET", tourInfo, true);    //http 메소드, 요청을 처리할 url, 비동기로 처리될 것인지 지정하는 boolean값
     xhr.send();
 
     /*

@@ -59,7 +59,7 @@ function showMap( coords ) {
 
     /* 지도가 보이는 형태 */
     var googleOption = {
-        zoom : 15,    // 0~21 까지 클수룩 자세하게 보임
+        zoom : 12,    // 0~21 까지 클수룩 자세하게 보임
         center : googleLatLng,  // 위에서 생성한 객체가 지도의 중앙에 오게
         mapTypeId : google.maps.MapTypeId.ROADMAP
     };
@@ -73,8 +73,11 @@ function showMap( coords ) {
         position: googleLatLng,
         map: newMap
     });
+    
 
     var coordInfo = "mapX=" + coords.longitude + "&mapY=" + coords.latitude;  //위도 경도 넘겨주기
-    getTourInfo(coordInfo);
+
+    console.log("mapX : " + coords.longitude + " & mapY : " + coords.latitude);
+    getTourInfo(newMap, coordInfo);
 
 }
