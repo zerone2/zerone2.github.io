@@ -5,7 +5,7 @@
 /** 버튼 클릭시 날씨 정보 불러옴**/
 document.addEventListener("DOMContentLoaded", function(){
 
-    var url1 = 'http://api.openweathermap.org/data/2.5/weather?q=Seoul,KR';
+    var url1 = 'https://api.openweathermap.org/data/2.5/weather?q=Seoul,KR';
     var url2 = '&units=metric&APPID=a09317be030ee8f6d5a2de545c1f79d7';
     var weatherURL = url1 + url2;
 
