@@ -9,9 +9,6 @@ function getTourInfo(google_map, coords) {
     var subStr = coords.toString().split(', '); //googleLatLng로 가져온 인자를 api형식에 맞게 변환.
     coords = "mapX=" + subStr[1].substring(0,subStr[1].length-1) + "&mapY=" + subStr[0].substring(1,);
 
-    //console.log(coords);
-    //console.log(subStr[1].substring(0,subStr[1].length-1) + "," + subStr[0].substring(1,));
-
     /**radius로 반경 지정**/
     var tourUrl1 = "http://api.visitkorea.or.kr/openapi/service/rest/EngService/locationBasedList?ServiceKey=RJIAymfYXJ3BFkiqarkd7OIgVl0i9SuZ9otu3dbjXZ6shNWV9u7cqGTsgHDjRKkHSmFUhpYMzclVYyT%2FEWriQA%3D%3D&contentTypeId=82&";
     var tourUrl2 = "&radius=10000&pageNo=1&numOfRows=10&listYN=Y&arrange=E&MobileOS=ETC&MobileApp=AppTesting&_type=json";
@@ -100,45 +97,5 @@ function getTourInfo(google_map, coords) {
 
     xhr.send();
 
-    /*
-    $.ajax({
-        dataType: "json",
-        url: tourInfo,
-        success: function (data) {
-
-            //콘솔에 데이터 받았다고 표시합니다
-            console.log('Tour data receied');
-
-            //html화면에 가져온 정보를 정렬해서 띄워줍니다
-            var i = 0;
-            var string = "";
-
-            if (data.response.body.items.item[0] == undefined) {
-                if (data.response.body.items.item == undefined) {
-                    string += "There is no popular restaurant near here";
-                }
-                else {
-                    string += "==============================================================" + "<br>"
-                        + "NAME" + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + ":" + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + data.response.body.items.item.title + "<br>"
-                        + "ADDRESS" + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + ":" + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + data.response.body.items.item.addr1 + "<br>"
-                        + "DISTANCE" + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + ":" + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + data.response.body.items.item.dist + "m" + "<br>";
-                }
-            }
-
-            else {
-                while (i < data.response.body.items.item.length) {
-                    if (i >= 5) {
-                        break;
-                    }
-                    string += "==============================================================" + "<br>"
-                        + "NAME" + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + ":" + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + data.response.body.items.item[i].title + "<br>"
-                        + "ADDRESS" + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + ":" + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + data.response.body.items.item[i].addr1 + "<br>"
-                        + "DISTANCE" + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + ":" + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + data.response.body.items.item[i].dist + "m" + "<br>";
-                    i++;
-                }
-            }
-                document.getElementById("tourInfo").innerHTML = string;
-        }
-    });*/
 }
 
