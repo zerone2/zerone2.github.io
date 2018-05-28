@@ -3,10 +3,6 @@
  **/
 
 /**tourInfo.js 가져오기**/
-/*$.getScript('tourInfo.js',function(){
-    console.log("tourInfo.js loaded!");
-});*/
-
 function loadScript(url, callback) {
     var script = document.createElement('script');
     script.src = url;
@@ -18,7 +14,7 @@ var myloaded = function() {
 }
 loadScript('js/tourInfo.js', myloaded);
 
-
+/**내 위치 가져오기**/
 function myLocation() {
     /* 객체가 존재하면 */
     if ( navigator.geolocation )
@@ -32,7 +28,7 @@ function myLocation() {
     }
 }
 
-/* 위치정보를 가져오는 사용자정의 핸들러함수 */
+/** 위치정보를 가져오는 사용자정의 핸들러함수 **/
 function successHandler( position ) {
     var latitude = position.coords.latitude;
     var longitude = position.coords.longitude;
@@ -52,7 +48,7 @@ function errorHandler( error ) {
     loc.innerHTML = "실패 : "+errorCode+" / "+errorMessage;
 }
 
-/* google 지도위에 보여주기 */
+/** google 지도위에 보여주기 **/
 function showMap( coords ) {
     /* 구글맵 객체생성자 ( 위도,경도 ) */
     var googleLatLng = new google.maps.LatLng( coords.latitude, coords.longitude );
@@ -69,15 +65,16 @@ function showMap( coords ) {
 
     /* 지도보이기 + 마커 추가*/
     var newMap = new google.maps.Map( map, googleOption );
-    var marker = new google.maps.Marker({
+    /*var marker = new google.maps.Marker({
         position: googleLatLng,
         map: newMap
-    });
-    
+    });*/
 
-    var coordInfo = "mapX=" + coords.longitude + "&mapY=" + coords.latitude;  //위도 경도 넘겨주기
+    //var coordInfo = "mapX=" + coords.longitude + "&mapY=" + coords.latitude;  //위도 경도 넘겨주기
 
-    console.log("mapX : " + coords.longitude + " & mapY : " + coords.latitude);
-    getTourInfo(newMap, coordInfo);
+    //console.log("mapX : " + coords.longitude + " & mapY : " + coords.latitude);
+    //getTourInfo(newMap, coordInfo);
+
+    getTourInfo(newMap, googleLatLng);
 
 }
