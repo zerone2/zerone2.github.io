@@ -63,18 +63,8 @@ function showMap( coords ) {
     var map = document.getElementById("googlemap");
 
 
-    /* 지도보이기 + 마커 추가*/
+    /* 지도보이기 */
     var newMap = new google.maps.Map( map, googleOption );
-    /*var marker = new google.maps.Marker({
-        position: googleLatLng,
-        map: newMap
-    });*/
-
-    //var coordInfo = "mapX=" + coords.longitude + "&mapY=" + coords.latitude;  //위도 경도 넘겨주기
-
-    //console.log("mapX : " + coords.longitude + " & mapY : " + coords.latitude);
-    //getTourInfo(newMap, coordInfo);
-
     getTourInfo(newMap, googleLatLng);
 
 }

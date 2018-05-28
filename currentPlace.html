@@ -4,26 +4,24 @@
     <meta charset="UTF-8">
     <title>Current place food Info</title>
 
-    <link rel="stylesheet" type="text/css" href="css/mainpage.css">
     <link rel="stylesheet" type="text/css" href="css/widget.css">
+    <link rel="stylesheet" type="text/css" href="css/mainpage.css">
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAskRKPWIM9m5By6Va2wNnxhEayWwWp3BI" type="text/javascript"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAskRKPWIM9m5By6Va2wNnxhEayWwWp3BI&callback=myLocation" type="text/javascript"></script>
     <!--api key = AIzaSyAskRKPWIM9m5By6Va2wNnxhEayWwWp3BI -->
-    <script src="js/tourInfo.js" type="text/javascript"></script>
     <script src="js/current_map.js" type="text/javascript"></script>
-    
+    <script src="js/tourInfo.js" type="text/javascript"></script>
+
 </head>
 <body>
-    <div>
         <div class="widget widget-size-2x2" style="top:20px;">
             <header>
                 <section><p>Current Position</p></section>
             </header>
             <div id="currentMap" class="widget-body">
-                <p>Click the button to get your current position.</p>
+                <p><b>Click the button to get your current position.</b></p>
                 <button id="currentMap_btn" style="width: 100%" onclick="myLocation()"><B>Click This!</B></button>
 
-                <!--<div id="googlemap"><img src="css/weather/img/seoul.jpg"></div>-->
                 <div id="googlemap" style="width:750px; height: 580px;"></div>
 
             </div>
@@ -34,9 +32,7 @@
                 <section><p>Restaurant Info</p></section>
             </header>
             <p id="tourInfo" align="left" style="font-size : 100%; font-family: 'Berlin Sans FB'">
-            
             </p>
         </div>
-    </div>
 </body>
 </html>

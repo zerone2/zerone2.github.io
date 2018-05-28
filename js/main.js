@@ -12,5 +12,4 @@ function selClick(){
 	} else if(selected_value == "currentLoc"){
 		location.href = "currentPlace.html";
 	}
-
 }
