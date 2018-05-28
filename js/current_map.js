@@ -1,5 +1,5 @@
 /**
- * Created by yicho on 2017-05-10.
+ * Created by yicho on 2018-05-23.
  **/
 
 /**tourInfo.js 가져오기**/

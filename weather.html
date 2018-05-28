@@ -7,6 +7,9 @@
 
       <link rel="stylesheet" href="css/weather/styles.css">
       <link rel="stylesheet" href="css/weather/climacon-font/styles.css">
+
+	   <script type="text/javascript" src="js/weather.js"></script>
+
    </head>
 
    <body>
@@ -21,12 +24,16 @@
                      <img src="css/weather/img/seoul.jpg">
                      <div class="img-area-front">
                         <h5 id="location">Wait Please!!</h5>
-
+	                     <div id="weather-desc">
+		                     <span>Cloudy, rain</span>
+	                     </div>
                         <ul class="weather-block-info">
                            <li>
                               <p id="temperature">25</p>
                            </li>
-                           <li></li>
+                           <li>
+	                           <img class="weatherIcon" id="weatherImg" title="weather image" alt="image loading fail"  >
+                           </li>
                            <li>
                               <ul class="weather-params">
                                  <li><i class="climacon thermometer medium-high"></i>
