@@ -1,23 +1,26 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Search Place</title>
     <link rel="stylesheet" href="css/widget.css">
     <link rel="stylesheet" href="css/reset.css">
+
+    <script type="text/javascript" src="js/searchbox.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAskRKPWIM9m5By6Va2wNnxhEayWwWp3BI&callback=initAutocomplete&libraries=places"
+            async defer></script>
+
 </head>
 <body>
-<div class="widget widget-googlemap">
+<div class="widget widget-size-2x2-ver2" style="width : 100%; height: 100%;" >
     <header>
         <section><p>Search The Place</p></section>
     </header>
     <div id="searchMap" class="widget-body">
-
-        <input id="pac-input"type="text" placeholder="검색할 위치 입력">
-        <div id="google_map">
-            <img src="img/google_map.jpg">
-        </div>
+        <div id="google_map" style="left: 150px; width: 80%; height: 700px;"></div>
+        <input id="pac-input" class="controls" type="text" placeholder="Search Box">
     </div>
+
 </div>
 </body>
 </html>

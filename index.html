@@ -5,9 +5,20 @@
 <head>
     <title>Korea Helper</title>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"> 
     <link rel="stylesheet" type="text/css" href="css/mainpage.css">
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript"  src="http://www.appelsiini.net/projects/chained/jquery.chained.min.js"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-select.min.js"></script>
+
+
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/tourInfo.js"></script>
+
+
 
 </head>
 
@@ -26,7 +37,6 @@
                         </nav>
                     </header>
 
-            
                 <!-- Banner -->
                     <section id="banner" class="major">
                         <div class="inner">
@@ -34,7 +44,10 @@
                                 <h1>Let's travel Korea</h1>
                             </header>
                             <div class="content">
-                                <select id="selBox" style="width: 100%">
+                                <select id="selBox" class="selectpicker show-tick form-control"
+                                        data-header="Select one that you want to see"
+                                        data-live-search="true" data-style="btn-info"
+                                        style="width: 100%">
                                     <option value=weather>Weather today</option>
                                     <option value=searchPlace>Search the place</option>
                                     <option value=currentLoc>Current place food</option>
@@ -46,6 +59,7 @@
                         </div>
                     </section>
                     <!-- Menu -->
+
                     <div class="pop-layer">
                         <nav id="menu" class="popup-layer">
                             <ul class="links">

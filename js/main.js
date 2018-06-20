@@ -16,3 +16,4 @@ function selClick(){
 		location.href = "currentPlace.html";
 	}
 }
+
