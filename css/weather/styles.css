@@ -88,7 +88,7 @@ body {
 }
 .weatherIcon{
   background-color : powderblue;
-  opacity:0.5;
+  opacity:0.8;
 }
 .img-area {
   -webkit-border-radius: 5px 5px 0 0;
@@ -97,8 +97,10 @@ body {
 }
 .img-area img {
   width: 100%;
-  -webkit-border-radius: 5px 5px 0 0;
-  border-radius: 5px 5px 0 0;
+  margin-left: 10px;
+  margin-right: 10px;
+  -webkit-border-radius: 5px 5px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
   display: block;
   z-index: 1;
 }
@@ -220,8 +222,9 @@ body {
   text-transform: lowercase;
 }
 .week-day-temperature {
-  margin: 0;
-  position: relative;
+    margin: 0;
+    position: relative;
+
 }
 .week-day-temperature:after {
   content: '';
@@ -254,7 +257,7 @@ body {
 #temperature {
   text-align: right;
   margin: 0;
-  font-size: 130px;
+  font-size: 120px;
   height: 100%;
   line-height: 200px;
   position: relative;
@@ -350,11 +353,21 @@ body {
 .today {
   position: absolute;
   font-weight: 300;
-  font-size: 25px;
+  font-size: 30px;
   text-align: center;
   width: 100%;
   margin: 0;
   top: 15px;
+  left: 0;
+}
+#date{
+  position: absolute;
+  font-weight: 300;
+  font-size: 18px;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  top: 50px;
   left: 0;
 }
 .today {
