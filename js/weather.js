@@ -5,7 +5,6 @@
 /** 버튼 클릭시 날씨 정보 불러옴**/
 $(document).ready(function(){
 
-
     var url1 = 'https://api.openweathermap.org/data/2.5/weather?q=Seoul,KR';
     var url2 = '&units=metric&APPID=a09317be030ee8f6d5a2de545c1f79d7';
 
@@ -95,21 +94,16 @@ $(document).ready(function(){
             console.log(weatherURL2);
 
             /**콘솔에 불러온 데이터 정보 기록**/
-            //console.log(data2.city.name);
-            //console.log(data2.list[0].weather[0].main);
+
             console.log("day tempature : " + data2.list[0].temp.day);
-
             console.log("날짜 : " + (dt.toISOString()).split('T')[0]);
-
 
             var weatherIcon;
             var img;
             var dt2 = new Date();
 
-
             $('.week-forecast').find('li').each(function (i,e) {
-               //console.log($(this).text());
-               //console.log(dt2.getDay());
+
                weatherIcon =  data2.list[i].weather[0].icon;
                img = '<img src=\"https://openweathermap.org/img/w/' + weatherIcon + '.png\">';
                $(this).find('h5').html((dt2.getMonth()+1) + "/" + dt2.getDate() + '<br>' + week[dt2.getDay()]);
