@@ -55,7 +55,7 @@ function getTourInfo(google_map, coords) {
                         }
                     })(marker));
 
-                    string += "==============================================================" + "<br>"
+                    string += "<br>"
                         + "NAME" + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + ":" + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + data.response.body.items.item.title + "<br>"
                         + "ADDRESS" + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + ":" + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + data.response.body.items.item.addr1 + "<br>"
                         + "DISTANCE" + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + ":" + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + data.response.body.items.item.dist + "m" + "<br>";
@@ -70,7 +70,7 @@ function getTourInfo(google_map, coords) {
                     var googleLatLng = new google.maps.LatLng(data.response.body.items.item[i].mapy, data.response.body.items.item[i].mapx);
                     //console.log("mapY : " + data.response.body.items.item[i].mapy + " & mapX : " + data.response.body.items.item[i].mapx);
 
-                    string += "==============================================================" + "<br>"
+                    string += "<br>"
                         + "NAME" + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + ":" + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + data.response.body.items.item[i].title + "<br>"
                         + "ADDRESS" + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + ":" + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + data.response.body.items.item[i].addr1 + "<br>"
                         + "DISTANCE" + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + ":" + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + data.response.body.items.item[i].dist + "m" + "<br>";
