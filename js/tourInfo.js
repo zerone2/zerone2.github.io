@@ -18,7 +18,6 @@ function getTourInfo(google_map, coords) {
     console.log(tourInfo);
     console.log("tourInfo loaded");
 
-    var xhr = new XMLHttpRequest();
     var marker;
     var myPos_mark = new google.maps.Marker({       //현재 위치 마커생성
         position: myPos,
@@ -26,12 +25,11 @@ function getTourInfo(google_map, coords) {
         label: "me"
     });
     var infowindow = new google.maps.InfoWindow();
-    xhr.open("GET", tourInfo, true);    //http 메소드, 요청을 처리할 url, 비동기로 처리될 것인지 지정하는 boolean값
 
-    xhr.onload = function(){        //서버로부터 응답 받으면 익명함수 호출
-        if(xhr.status == 200){      //status 값이 정상이면 함수 정상 실행
-
-            data = JSON.parse(xhr.responseText);
+    $.ajax({
+        dataType: "json",
+        url: tourInfo,
+        success : function(data){
 
             console.log('Tour data received');
 
@@ -93,9 +91,8 @@ function getTourInfo(google_map, coords) {
             }
                 document.getElementById("tourInfo").innerHTML = string;
         }
-    }
+    });
 
-    xhr.send();
 
 }
 
