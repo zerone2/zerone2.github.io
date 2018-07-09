@@ -2,7 +2,11 @@
 
 
 ## 서울시 공공데이터 맛집 api 사용
-
+```
+https://api.visitkorea.or.kr
+https://api.openweathermap.org
+https://maps.googleapis.com
+```
 ## main page
 *****
 1. 현재 날씨
