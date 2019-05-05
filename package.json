@@ -1,0 +1,19 @@
+{
+  "name": "zerone2.github.io",
+  "version": "1.0.0",
+  "description": "[Resume](https://startbootstrap.com/template-overviews/resume/) is a resume and CV theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features a fixed sidebar with content sections to build a simple, yet elegant resume.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zerone2/zerone2.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zerone2/zerone2.github.io/issues"
+  },
+  "homepage": "https://github.com/zerone2/zerone2.github.io#readme"
+}
