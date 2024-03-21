@@ -8,33 +8,27 @@ function AboutCard() {
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
-            Hi Everyone, I am <span className="purple">Soumyajit Behera </span>
-            from <span className="purple"> Bhubaneswar, India.</span>
-            <br /> I am a final year student pursuing an Integrated MSc (IMSc)
-            in Maths and Computing at BIT Mesra.
-            <br />
-            Additionally, I am currently employed as a software developer at
-            Juspay.
-            <br />
-            <br />
-            Apart from coding, some other activities that I love to do!
+            전) 소프트웨어 마에스트로 9기<br/>
+            전) 광운대학교 컵퓨터소프트웨어 졸업<br/>
+            전) Zipfund 재직<br/>
+            현) 밸런스히어로 재직중<br/>
           </p>
-          <ul>
-            <li className="about-activity">
-              <ImPointRight /> Playing Games
-            </li>
-            <li className="about-activity">
-              <ImPointRight /> Writing Tech Blogs
-            </li>
-            <li className="about-activity">
-              <ImPointRight /> Travelling
-            </li>
-          </ul>
+          {/*<ul>*/}
+          {/*  <li className="about-activity">*/}
+          {/*    <ImPointRight /> Playing Games*/}
+          {/*  </li>*/}
+          {/*  <li className="about-activity">*/}
+          {/*    <ImPointRight /> Writing Tech Blogs*/}
+          {/*  </li>*/}
+          {/*  <li className="about-activity">*/}
+          {/*    <ImPointRight /> Travelling*/}
+          {/*  </li>*/}
+          {/*</ul>*/}
 
           <p style={{ color: "rgb(155 126 172)" }}>
             "Strive to build things that make a difference!"{" "}
           </p>
-          <footer className="blockquote-footer">Soumyajit</footer>
+          {/*<footer className="blockquote-footer">Zer01ne</footer>*/}
         </blockquote>
       </Card.Body>
     </Card>

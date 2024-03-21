@@ -4,10 +4,8 @@ import myImg from "../../Assets/avatar.svg";
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
-  AiOutlineTwitter,
-  AiFillInstagram,
+  AiTwotoneMail
 } from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
 
 function Home2() {
   return (
@@ -16,40 +14,29 @@ function Home2() {
         <Row>
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span className="purple"> INTRODUCE </span> MYSELF
+              Simple <span className="purple"> Introduction </span>
             </h1>
             <p className="home-about-body">
-              I fell in love with programming and I have at least learnt
-              something, I think… 🤷‍♂️
+              개발하는 것을 좋아하고 가끔 몰입하면 주변 소리를 듣지 못할 때가 있어요ㅜㅜ 🤷‍♂️
               <br />
-              <br />I am fluent in classics like
+              새로운 것을 배우는 것과 기존의  <b className="purple">비효율적인 것을 개선하고 성능을 높이는 것</b>에 관심이 많아요.
+              <br />
+              맡은 일은 어떻게든 해결하는 편입니다 :)
+              <br />
+              <br />
               <i>
-                <b className="purple"> C++, Javascript and Go. </b>
+                <b className="purple"> 커뮤니케이션까지 잘하는 </b>
+              </i>
+              개발자
+              <br />
+              가장 자신있는 언어 및 프레임워크는
+              <i>
+                <b className="purple"> Javascript 와 React.js </b>입니다.
               </i>
               <br />
               <br />
-              My field of Interest's are building new &nbsp;
-              <i>
-                <b className="purple">Web Technologies and Products </b> and
-                also in areas related to{" "}
-                <b className="purple">
-                  Blockchain.
-                </b>
-              </i>
-              <br />
-              <br />
-              Whenever possible, I also apply my passion for developing products
-              with <b className="purple">Node.js</b> and
-              <i>
-                <b className="purple">
-                  {" "}
-                  Modern Javascript Library and Frameworks
-                </b>
-              </i>
-              &nbsp; like
-              <i>
-                <b className="purple"> React.js and Next.js</b>
-              </i>
+              개발 외적으로는
+              <b className="purple"> 영화, 음악듣기, 유튜브보기, 요리하기, 웹툰, 축구, 게임, 각종 아웃도어 스포츠</b> 등을 좋아합니다.<br/>
             </p>
           </Col>
           <Col md={4} className="myAvtar">
@@ -67,7 +54,7 @@ function Home2() {
             <ul className="home-about-social-links">
               <li className="social-icons">
                 <a
-                  href="https://github.com/soumyajit4419"
+                  href="https://github.com/zerone2"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
@@ -77,32 +64,12 @@ function Home2() {
               </li>
               <li className="social-icons">
                 <a
-                  href="https://twitter.com/Soumyajit4419"
+                  href="mailto:czer01ne@gmail.com"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
                 >
-                  <AiOutlineTwitter />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.linkedin.com/in/soumyajit4419/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <FaLinkedinIn />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.instagram.com/soumyajit4419"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
-                >
-                  <AiFillInstagram />
+                  <AiTwotoneMail />
                 </a>
               </li>
             </ul>
